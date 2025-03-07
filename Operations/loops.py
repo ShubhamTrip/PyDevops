@@ -47,3 +47,11 @@ for i in range(10):
 # It is not available in python
 # It is used to jump to a specific line of code
 # It is not recommended to use goto statement
+
+#Printing is a single line
+for i in range(10):
+    print(i, end = " ")
+
+#Printing in a single line with some separator
+for i in range(10):
+    print(i, end = ", ")
