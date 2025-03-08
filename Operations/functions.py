@@ -46,3 +46,17 @@ def my_function(a, b, /, *, c, d):
   print(a + b + c + d)
 
 my_function(5, 6, c = 7, d = 8)
+
+
+#Nested function
+
+def funcPar(a,b):
+  def funcChild(c,d):
+     return c,d
+  return funcChild(a,b)
+
+myVar = funcPar(10,5) #If multiple values are returned in a single variable it will be returned as tuple.
+
+#or 
+
+var1, var2 = funcPar(10,5)# This is also true.
