@@ -3,14 +3,20 @@
 # Any func starting from and ending with __ is a special constructor..
 # We dont need to declaring variable since python allows dynamic typing(Dec and init happening together). 
 # Imagine declaring var without value which is not possible..
-# Class Variable  are declared and init inside init functions and can be accessed with the help of slef.
+# Object Variable  are declared and init inside init functions and can be accessed with the help of slef.
+# Class variables are declared inside class and can be accessed by using dot operator.
 # self is this of 3g Langs.
 class Book:
+    publication = "Vidhya Bharati" # Can be directly accessed using . oprator.
+    
+    author = "Shubham" #We generally dont do this.
+
     def __init__(self,title, author, price, quantity):
 
         #Initialization and declaration is happening here..
         self.title = title
-        self.author = author
+        self.author = author # Here the class attribute is automatically overwritten and has become obj attribute.
+    
         self.price = price
         self.quantity = quantity
         self.__discount = price * 0.10 # This is private now
@@ -33,6 +39,8 @@ class Book:
         return f"Price is {self.price} and title is {self.title}"
 
 book1 = Book("Good Habits", "Shubbh", 300, 50)
+
+print(Book.publication)
 
 print(book1)
 
