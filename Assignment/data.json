@@ -1,0 +1,6 @@
+{
+  "name": "Shubham",
+  "age": 25,
+  "city": "New Delhi",
+  "skills": ["Python", "Terraform", "DevOps"]
+}
